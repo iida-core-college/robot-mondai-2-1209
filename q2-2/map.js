@@ -110,11 +110,11 @@ Map.prototype.beforeStart = function(pattern) {
 	}
 	if (Map.prototype.state == 0) {
 		Map.prototype.map[5][5] = 3;
-		Map.prototype.map[5][3] = 5;
+		Map.prototype.map[6][3] = 5;
 	}
 	else {
 		Map.prototype.map[5][5] = 2;
-		Map.prototype.map[5][7] = 5;
+		Map.prototype.map[4][7] = 5;
 	}
 	Map.prototype.state = (Map.prototype.state + 1) % 2;
 };
