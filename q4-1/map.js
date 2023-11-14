@@ -9,7 +9,7 @@ Map.prototype = {
 		[1,1,1,0,1,2,0,1,0,1,1,1],
 		[1,1,1,0,1,3,0,1,0,1,1,1],
 		[1,1,1,0,1,3,0,1,0,1,1,1],
-		[1,1,1,0,1,3,0,0,0,1,1,1],
+		[1,1,1,0,1,3,5,0,0,1,1,1],
 		[1,1,1,5,0,5,1,1,1,1,1,1],
 		[1,1,1,1,1,1,1,1,1,1,1,1],
 		[1,1,1,1,1,1,1,1,1,1,1,1],
@@ -23,7 +23,7 @@ Map.prototype = {
 	},
 	"hint": "すべて通ってゴールしよう‼",
 	"state": 0,
-	"goals": 4,
+	"goals": 5,
 	"patterns": 1,
 	"blocksLimit": 0,
 	"links": {
@@ -47,7 +47,7 @@ Map.prototype = {
 		"Advanced": {
 			"times_loop": true,
 			"floor_color_loop": false,
-			"movable_loop": true
+			"movable_loop": false
 		},
 		"Expert": {
 			"write_register": true,
