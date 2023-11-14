@@ -46,7 +46,7 @@ Map.prototype = {
 		},
 		"Advanced": {
 			"times_loop": true,
-			"floor_color_loop": true,
+			"floor_color_loop": false,
 			"movable_loop": true
 		},
 		"Expert": {
