@@ -6,13 +6,13 @@ Map.prototype = {
 		[1,1,1,1,1,0,1,1,1,1,1,1],
 		[1,1,1,0,0,2,0,0,1,1,1,1],
 		[1,1,1,0,1,1,1,0,1,1,1,1],
-		[1,1,0,0,1,1,1,0,1,1,1,1],
-		[1,1,0,1,1,1,1,0,1,1,1,1],
-		[1,0,0,0,1,1,1,0,1,1,1,1],
-		[1,0,1,0,1,1,0,0,0,1,1,1],
-		[1,0,1,0,1,1,0,1,0,1,1,1],
-		[1,0,1,0,1,1,0,1,0,1,1,1],
-		[1,1,1,1,1,1,0,1,0,1,1,1],
+		[1,1,1,0,1,1,1,0,1,1,1,1],
+		[1,1,1,0,1,1,1,0,1,1,1,1],
+		[1,1,0,0,0,1,0,0,0,1,1,1],
+		[1,1,0,1,0,1,0,1,0,1,1,1],
+		[1,1,0,1,0,1,0,1,0,1,1,1],
+		[1,1,0,1,0,1,0,1,0,1,1,1],
+		[1,1,1,1,1,1,1,1,1,1,1,1],
 		[1,1,1,1,1,1,1,1,1,1,1,1]
 	],
 	"start": {
@@ -109,23 +109,23 @@ Map.prototype.beforeStart = function(pattern) {
 		Map.prototype.state = parseInt(pattern);
 	}
 	if (Map.prototype.state == 0) {
-		Map.prototype.map[9][1] = 5;
-		Map.prototype.map[6][2] = 4;
+		Map.prototype.map[9][2] = 5;
+		Map.prototype.map[6][3] = 4;
 	}
 	else if(Map.prototype.state == 1){
-		Map.prototype.map[9][3] = 5;
-		Map.prototype.map[6][2] = 3;
+		Map.prototype.map[9][4] = 5;
+		Map.prototype.map[6][3] = 3;
 	}
 	else if(Map.prototype.state == 2){
 		Map.prototype.map[2][5] = 4;
-		Map.prototype.map[7][7] = 4;
-		Map.prototype.map[10][6] = 5;
+		Map.prototype.map[6][7] = 4;
+		Map.prototype.map[9][6] = 5;
 	}
 	else if(Map.prototype.state == 3){
 		
 		Map.prototype.map[2][5] = 4;
-		Map.prototype.map[7][7] = 3;
-		Map.prototype.map[10][8] = 5;
+		Map.prototype.map[6][7] = 3;
+		Map.prototype.map[9][8] = 5;
 
 	}
 	Map.prototype.state = (Map.prototype.state + 1) % 2;
