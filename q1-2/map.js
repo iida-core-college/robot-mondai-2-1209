@@ -21,7 +21,7 @@ Map.prototype = {
 		"direction": 0,
 		"life": 65534,
 	},
-	"hint": "右にゴールが見えるよ",
+	"hint": "左にゴールが見えるよ",
 	"state": 0,
 	"goals": 1,
 	"patterns": 1,
