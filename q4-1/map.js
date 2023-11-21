@@ -7,9 +7,9 @@ Map.prototype = {
 		[1,1,1,1,1,1,1,1,1,1,1,1],
 		[1,1,1,5,0,0,0,1,5,1,1,1],
 		[1,1,1,0,1,2,0,1,0,1,1,1],
-		[1,1,1,0,1,0,0,1,0,1,1,1],
-		[1,1,1,0,1,0,0,1,0,1,1,1],
-		[1,1,1,0,1,0,0,0,0,1,1,1],
+		[1,1,1,0,1,3,0,1,0,1,1,1],
+		[1,1,1,0,1,3,0,1,0,1,1,1],
+		[1,1,1,0,1,3,5,0,0,1,1,1],
 		[1,1,1,5,0,5,1,1,1,1,1,1],
 		[1,1,1,1,1,1,1,1,1,1,1,1],
 		[1,1,1,1,1,1,1,1,1,1,1,1],
@@ -21,9 +21,9 @@ Map.prototype = {
 		"direction": 2,
 		"life": 65534,
 	},
-	"hint": "白いマスをすべて通ってゴールしよう‼",
+	"hint": "すべて通ってゴールしよう‼",
 	"state": 0,
-	"goals": 4,
+	"goals": 5,
 	"patterns": 1,
 	"blocksLimit": 0,
 	"links": {
@@ -46,8 +46,8 @@ Map.prototype = {
 		},
 		"Advanced": {
 			"times_loop": true,
-			"floor_color_loop": true,
-			"movable_loop": true
+			"floor_color_loop": false,
+			"movable_loop": false
 		},
 		"Expert": {
 			"write_register": true,
@@ -110,7 +110,7 @@ Map.prototype.beforeStart = function(pattern) {
  * ターンごとに発生する処理
  */
 Map.prototype.afterMoved = function(t, pos) {
-	if (Map.prototype.map[pos.y][pos.x] == 0 || Map.prototype.map[pos.y][pos.x] == 5) {
+	if (Map.prototype.map[pos.y][pos.x] == 0 || Map.prototype.map[pos.y][pos.x] == 5 || Map.prototype.map[pos.y][pos.x] == 3) {
 		switch(pos.direction) {
 			case 0:
 				Map.prototype.map[pos.y + 1][pos.x] = 6;
